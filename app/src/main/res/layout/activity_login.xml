@@ -49,9 +49,9 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/roll_number"
             android:transitionName="roll_number_trans"
             android:hint="Roll Number"
+            android:id="@+id/roll_number"
             android:background="@drawable/layout_border"
             android:layout_marginBottom="20dp"
             android:textColorHint="#fff"
@@ -68,10 +68,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Password_box"
             android:fontFamily="@font/antic"
             android:transitionName="password_trans"
             android:hint="Password"
+            android:id="@+id/password_box"
             android:background="@drawable/layout_border"
             android:textColorHint="#fff"
             app:passwordToggleTint="#fff"
@@ -99,12 +99,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LOG IN"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:background="#00FFFF"
             android:fontFamily="@font/antic"
+            android:text="LOG IN"
+            android:id="@+id/loginBtn"
             android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp" />
+            android:onClick="loginBtn"/>
 
         <Button
             android:id="@+id/Sign_btn"
