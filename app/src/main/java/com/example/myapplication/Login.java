@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
+
 import com.example.myapplication.dashboard.DashboardFirstActivity;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -97,6 +99,8 @@ public class Login extends AppCompatActivity {
                         String rollNumberFromDB = snapshot.child(userEnteredPassword).child("rollNumber").getValue(String.class);
                         String phoneNumberFromDB = snapshot.child(userEnteredPassword).child("phoneNumber").getValue(String.class);
                         String eMailFromDB = snapshot.child(userEnteredPassword).child("eMail").getValue(String.class);
+
+                        Toast.makeText(Login.this,"Login Successful",Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(getApplicationContext(), DashboardFirstActivity.class);
 

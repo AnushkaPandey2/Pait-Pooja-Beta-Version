@@ -4,7 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,11 +19,18 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class SignUp extends AppCompatActivity {
 
     TextInputLayout regName, regRollNumber, regEmail, regPhoneNumber, regPassword;
     Button regButton, regToLoginBtn;
+
+    TextView regselected ;
+    Spinner reggender;
+
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -38,6 +50,39 @@ public class SignUp extends AppCompatActivity {
         regButton = findViewById(R.id.signup_btn);
         regToLoginBtn = findViewById(R.id.login_btn);
 
+        regselected = findViewById(R.id.spinnerText);
+        reggender = findViewById(R.id.spinnerGender);
+
+        List<String> list = new ArrayList<String>();
+        list.add( 0, "Select Gender");
+        list.add("FEMALE");
+        list.add("MALE");
+        list.add("OTHERS");
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.container_spinner,list);
+
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        reggender.setAdapter(arrayAdapter);
+
+        /*reggender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (adapterView.getItemAtPosition(i).equals("Select Gender")) {
+
+                }
+                else {
+                    regselected.setText(adapterView.getSelectedItem().toString());
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });*/
+
+
+
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,9 +97,12 @@ public class SignUp extends AppCompatActivity {
                 String eMail = regEmail.getEditText().getText().toString();
                 String phoneNumber = regPhoneNumber.getEditText().getText().toString();
                 String password = regPassword.getEditText().getText().toString();
+/*
+                String gender = reggender.getEditText().getText().toString();
+*/
                 User user = new User(name, rollNumber, eMail, phoneNumber, password);
                 reference.child(rollNumber).setValue(user);
-
+                Toast.makeText(SignUp.this,"Registration Successful",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), DashboardFirstActivity.class);
                 startActivity(intent);
                 finish();
@@ -120,7 +168,7 @@ public class SignUp extends AppCompatActivity {
             return false;
         }
         else if(!val4.matches(mobileVal)) {
-            regPhoneNumber.setError("Wrong Phone Number ");
+            regPhoneNumber.setError("Wrong Phone Number");
             return false;
         }
         else {

@@ -21,29 +21,21 @@
         android:transitionName="logo_text_trans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-40dp"
+        android:layout_marginTop="-100dp"
         android:fontFamily="@font/bungee"
+        android:layout_marginRight="30dp"
         android:text="Welcome"
         android:textColor="#fff"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:layout_gravity="right" />
 
-    <TextView
-        android:id="@+id/slogan_name"
-        android:transitionName="slogan_name_trans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SignUp to start the new journey"
-        android:fontFamily="@font/antic"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        android:layout_marginTop="-30dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -139,6 +131,36 @@
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/layout_border"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp">
+
+ <!--       <TextView
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:id="@+id/spinnerText"
+            android:hint="Select Gender"
+            android:fontFamily="@font/antic"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            />-->
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/style_spinner" />
+
+    </LinearLayout>
+
 
     <Button
         android:layout_width="match_parent"
