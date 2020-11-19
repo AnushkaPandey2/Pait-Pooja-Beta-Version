@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimg"
+    tools:context=".ForgPassCountryVerify">
+
+    <ImageView
+        android:id="@+id/Logo_image"
+        android:transitionName="logo_image_trans"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/Logo_text"
+        android:transitionName="logo_text_trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate OTP"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="-90dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:fontFamily="@font/bungee" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="115dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="-340dp"
+        android:layout_marginRight="20dp"
+        app:ccp_contentColor="@color/white"
+         />
+
+    <EditText
+        android:id="@+id/t1"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Enter Mobile"
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="-130dp"
+        android:layout_marginRight="15dp" />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="171dp"
+        android:layout_height="50dp"
+        android:text="Get OTP"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="-290dp"/>
+
+</LinearLayout>

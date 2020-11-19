@@ -137,5 +137,8 @@ public class Login extends AppCompatActivity {
         finish();
     }
 
+    public void forgotPassword(View view) {
+        startActivity(new Intent(getApplicationContext(),ForgPassCountryVerify.class));
+    }
 
 }

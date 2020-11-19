@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cartActivity"></activity>
+        <activity android:name=".ManageOtp"></activity>
+        <activity android:name=".ForgPassCountryVerify" />
+        <activity android:name=".cartActivity" />
         <activity android:name=".dashboard.DashboardFirstActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".Login" />

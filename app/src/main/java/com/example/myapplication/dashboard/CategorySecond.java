@@ -47,17 +47,16 @@ public class CategorySecond extends Fragment {
         super.onCreate(savedInstanceState);
 
         list1 = new ArrayList<>();
-        list1.add(new RecipeModel(R.drawable.bgimg, "food1"));
-
-        list1.add(new RecipeModel(R.drawable.bgimg, "food2"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food3"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food4"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food5"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food6"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food7"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food8"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food9"));
-        list1.add(new RecipeModel(R.drawable.bgimg, "food10"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food1"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food2"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food3"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food4"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food5"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food6"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food7"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food8"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food9"));
+        list1.add(new RecipeModel(R.drawable.bgimg, "Category2    food10"));
 
     }
 
